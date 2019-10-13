@@ -1,7 +1,6 @@
 import unittest
 from mock import patch
 
-from robot.src.exceptions.start_exception import StartException
 from robot.src.main.orchestrator import Orchestrator
 
 

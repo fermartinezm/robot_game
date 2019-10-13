@@ -11,9 +11,12 @@ class Rotation(object):
     # This method is going to associate the current direction with
     # a key from the dic "aux"
     def current_orientation(self, current_pos):
-        for aux_key, aux_face in self.aux.items():
-            if aux_face == current_pos['f']:
-                return aux_key
+        try:
+            for aux_key, aux_face in self.aux.items():
+                if aux_face == current_pos['f']:
+                    return aux_key
+        except Exception as ex:
+            raise ex
 
     # This method is going to rotate the robot
     def rotate(self, direction, current_pos):
