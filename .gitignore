@@ -1,0 +1,7 @@
+venv/
+.tox/
+.tox/*
+.idea/*
+*egg*
+*.egg*
+*.pyc
