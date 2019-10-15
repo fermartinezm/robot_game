@@ -11,7 +11,7 @@ class Orchestrator(object):
         self.movement = Movement()
         self.placement = Placement()
         self.rotation = Rotation()
-        self.inout = Inputs()
+        self.inputs = Inputs()
 
     def place_robot(self, desired_pos):
         return self.placement.place(desired_pos)
@@ -23,7 +23,7 @@ class Orchestrator(object):
         return self.rotation.rotate(direc, current_pos)
 
     def treat_inputs(self, inp):
-        return self.inout.treat_inputs(inp)
+        return self.inputs.treat_inputs(inp)
 
     # Method to execute the actions
     def execute_command(self, cmd, current_pos):

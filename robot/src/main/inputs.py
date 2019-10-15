@@ -13,6 +13,7 @@ class Inputs(object):
             # Get action from the input and check that it exists
             action = inputs['inp'].split(' ')[0]
             checked_action = self.check_action(action)
+
             # If the action is place, get the arguments
             if action == 'PLACE':
                 x, y, f = self.get_place_arguments(inputs)
@@ -27,6 +28,7 @@ class Inputs(object):
                         'This command should not have arguments')
                 except ArgsException as ex:
                     raise ex
+
                 # If the action is not place and it has not arguments
                 # send back to the orchestrator as a dict
                 except Exception:
@@ -96,9 +98,3 @@ class Inputs(object):
             raise ex
 
         return faced
-
-    '''# Method to print the current position of the robot
-    @staticmethod
-    def report(current_position):
-        print(current_position)
-        return current_position'''
