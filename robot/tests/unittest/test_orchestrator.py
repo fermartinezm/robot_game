@@ -6,7 +6,7 @@ from robot.src.exceptions.start_exception import StartException
 from robot.src.main.orchestrator import Orchestrator
 
 
-class TestInOut(unittest.TestCase):
+class TestOrchestrator(unittest.TestCase):
 
     def setUp(self):
         self.__CURRENT_POS = {'x': 1, 'y': 1, 'f': 'SOUTH'}
